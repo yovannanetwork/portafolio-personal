@@ -1,0 +1,59 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+/*---section header------*/
+header{
+	position: fixed;
+	z-index: 2000;
+}
+/*-----section video y hero-----*/
+.homepage-hero-module{
+	position: ;
+}
+.hero{
+	position: absolute;
+	bottom: 25%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	vertical-align: middle;
+}
+/*-----section about-me----*/
+.about-me {
+  background: url(http://austinmaterialsmarketplace.org/wp-content/uploads/2015/03/wood-6.jpeg) center bottom;
+	background-size: cover;
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  height: 580px;
+  margin: auto;  
+}
+
+#message {
+  font-size: 80px;
+  color: #EEE;
+  font-family: Comic Sans, Comic Sans MS, cursive; 
+  -webkit-transform: rotateZ(-15deg);
+  -moz-transform: rotateZ(-15deg);
+}
+
+#picture {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: absolute;
+  border-radius: 1000px;
+  box-shadow: 0 1px 5px rgba(255,255,255,.5), inset 0 1px 5px #663718;
+  background: url(../img/imagen-about-me.JPG) center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/*-----section--experiencia----*/
+
+/*-----section---skill-------*/
+
+/*------section--contacto----*/
