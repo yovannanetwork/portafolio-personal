@@ -110,13 +110,24 @@ header {
     width: 380px;
     height: 220px;
     overflow: hidden; }
+    .portafolio ul li:hover {
+      box-shadow: inset 0 0 10px 10px rgba(183, 87, 36, 0.75); }
     .portafolio ul li .imagen-table {
       width: 380px;
       height: 220px;
       position: absolute;
-      background: rgba(249, 170, 127, 0.58);
+      background: rgba(183, 87, 36, 0.5);
+      opacity: 0;
+      transition: all 1seg;
       top: 0;
       left: 0;
       display: table; }
+      .portafolio ul li .imagen-table:hover {
+        opacity: 1.5; }
+      .portafolio ul li .imagen-table i {
+        font-size: 50px;
+        color: white;
+        display: table-cell;
+        vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */
