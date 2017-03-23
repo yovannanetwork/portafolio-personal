@@ -1,0 +1,56 @@
+$position: absolute;
+$width: 100%;
+$margin: 0;
+$color-secundario: rgba(249, 170, 127, 0.58);
+$color-principal: rgb(69, 111, 101);
+$colorOpaco: rgba(69, 111, 101, 0.57);
+$colorNaranja: rgb(249,170,271);
+$colorPlomo: rgb(236,234,222);
+$white: white;
+//----------------
+*{
+	outline: 1px solid green;
+	margin: 0;
+	padding: 0;
+}
+header{
+	position: fixed;
+	z-index: 2000;
+	background: $color-principal;
+	color: $white;
+	width: $width;
+	a{
+		color: $white;
+	}
+}
+.video{
+	.hero{
+		position: $position;
+		bottom: $width/3;
+		width: $width;	
+	}
+	.text-transparente{
+		width: $width/2;
+		margin: auto;
+		height: 200px;
+		background: $colorOpaco;
+		color: $white;
+	}
+}
+//  section about me
+.about-me{
+	background-image: url(../img/about-me.JPG);
+	background-size: cover;
+	height: 680px;
+	.text-aboutme{
+		width: $width/2;
+		background: $color-secundario;
+		float: left;
+		margin: $width/6 auto;
+	}
+}
+/*  seccion habilidades   */
+
+@import '_skill';
+/* seccion portafolio */
+@import '_portafolio';

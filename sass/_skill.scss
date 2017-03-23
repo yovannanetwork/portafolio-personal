@@ -1,0 +1,70 @@
+//declarando variables
+$size: 100px;
+$space: $size/5;
+$duracion: 800ms;
+$fondo: rgb(69, 111, 101);
+$fontColor: white;
+/* ----------- seccion habilidades--*/
+.skill{
+	background: $colorNaranja;
+	height: 650px;
+	.skill-content{
+		margin: 10% auto;
+		h2{
+			margin: 5%;
+		}
+	}
+}
+.contenedor{
+	margin: 0 auto;
+	position: relative;
+	perspective: $size*8;
+	transform-style: preserve-3d;
+	transform-origin: 50% 50%;
+	height: $size*3;
+	.cuadro{
+		position: $position;
+		width: $size;
+		height: $size;
+		color: $fontColor;
+		display: inline-block;
+		/*bottom: 0;
+		left: 10%;*/
+		line-height: $size;
+		text-align: center;
+		transition: $duracion;
+		font-size: $size/2;
+	}
+}
+.n1{
+	background: $fondo;
+	transform: rotate3d(0,0,1, 0deg) translate3d(0,0,0) scale(1.0);
+}
+.n2{
+	background: desaturate(lighten($fondo,5),5);
+	transform: rotate3d(0,0,1, 18deg) translate3d($space,0,-$space) scale(0.90);
+}
+.n3{
+	background: desaturate(lighten($fondo,10),10);
+	transform: rotate3d(0,0,1 36deg) translate3d($space*2,0,-$space*2) scale(0.8);
+}
+.n4{
+	background: desaturate(lighten($fondo,15),15);
+	transform: rotate3d(0,0,1, 36deg) translate3d($space*3,0,-$space*3) scale(0.7);
+}
+.n5{
+	background: desaturate(lighten($fondo,20),20);
+	transform: rotate3d(0,0,1, 48deg) translate3d($space*4,0,-$space*4) scale(0.6);
+}
+.n6{
+	background: desaturate(lighten($fondo,25),25);
+	transform: rotate3d(0,0,1, 53deg) translate3d($space*5,0,-$space*5) scale(0.5);
+}
+.n7{
+	background: desaturate(lighten($fondo,30),30);
+	transform: rotate3d(0,0,1, 55deg) translate3d($space*6,0,-$space*6) scale(0.4);
+}
+.n8{
+	background: desaturate(lighten($fondo,35),35);
+	transform: rotate3d(0,0,1, 58deg) translate3d($space*7,0,-$space*7) scale(0.2);
+}

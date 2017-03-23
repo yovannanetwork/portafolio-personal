@@ -1,0 +1,29 @@
+// seccion portafolio
+.portafolio{
+	h2{
+		margin: 8% auto 2% auto;
+	}
+	ul{
+		margin-left: 0;
+		overflow: hidden;
+		li{
+			padding: 10px;
+			background: $color-principal;
+			margin: 0 20px 20px 0;
+			position: relative;
+			cursor: pointer;
+			width: $size*3.8;
+			height: $size*2.2;
+			overflow: hidden;
+			.imagen-table{
+				width: $size*3.8;
+				height: $size*2.2;
+				position: absolute;
+				background: $color-secundario;
+				top: 0;
+				left: 0;
+				display: table;
+			}
+		}
+	}
+}

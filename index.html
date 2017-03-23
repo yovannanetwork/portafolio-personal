@@ -15,10 +15,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-4 col-xs-8">
-					<img src="img/logo-1.png" class="img-responsive" alt="logo">
+					<!--<img src="img/logo-1.png" class="img-responsive" alt="logo">-->
+					<h1><strong>Yovanna Huañahue</strong></h1>
 				</div>
 				<div class="col-md-7 col-sm-8 col-xs-4">
-					<nav class="navbar navbar-default">
+					<nav class="navbar">
 					  <div class="container-fluid">
 						<div class="navbar-header">
 						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -30,11 +31,11 @@
 						</div>
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav navbar-right pull-right">
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Conóceme</a></li>
-							<li><a href="#">Experiencia</a></li>
-							<li><a href="#">Habilidades</a></li>
-							<li><a href="#">Contacto</a></li>
+							<li><a href="#inicio">Inicio</a></li>
+							<li><a href="#conoceme">Conóceme</a></li>
+							<li><a href="#skill">Habilidades</a></li>
+							<li><a href="#portafolio">Portafolio</a></li>
+							<li><a href="#contacto">Contacto</a></li>
 						  </ul>
 						</div>
 					  </div>
@@ -43,7 +44,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="video">
+	<section class="video"><a id="inicio"></a>
 		<div class="homepage-hero-module">
 			<div class="video-container">
 				<div class="filter"></div>
@@ -52,7 +53,7 @@
 				</video>
 			</div>
 		</div>
-		<div class="hero pull-right">
+		<div class="hero">
 			<div class="position-hero col-md-1 col-sm-1 hidden-xs">
 			<ul class="list list-group">
 				<li class="list-group-item"><i class="fa fa-github"></i></li>
@@ -68,19 +69,118 @@
 				</div>
 			</div>
 		</div>
+		<div class="flecha-down hero text-center">
+			<a href="" class="fa fa-long-arrow-down"></a>
+		</div>
 	</section>
-	<section class="about-me">
+	<section class="about-me text-center"><a id="conoceme"></a>
 		<div class="container">
 			<div class="row">
 				<div class="text-aboutme">
-					<div id="container">
-					  <div id="message">Conoceme</div>
-					  <div id="picture"></div>
+					<h2>Acerca de mi</h2>
+					<p class="">Mi nombre es Yovanna Huañahue Cruz, soy coder  egresada de Laboratoria. me  gusta  tomar nuevos retos; el último que asumí  fue el de ingresar a laboratoria donde aprendí programación web y gracias a la experiencia brindada puedo enfrentar el mundo real allá afuera con toda la confianza y seguridad de mi misma.
+					También me gusta el deporte, la lectura, la investigación, hacer reportaje, viajar y conocer culturas.
+					</p>
+					<span>“Me gusta vivir cada dia con el objetivo de aprender algo nuevo”</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="skill text-center"><a id="skill"></a>
+		<div class="container">
+			<div class="row">
+				<div class="skill-content">
+					<h2>HABILIDADES</h2>
+					<div class="col-md-7 contenedor" id="contenedors">
+						<div class="cuadro n1">1</div>
+						<div class="cuadro n2">2</div>
+						<div class="cuadro n3">3</div>
+						<div class="cuadro n4">4</div>
+						<div class="cuadro n5">5</div>
+						<div class="cuadro n6">6</div>
+						<div class="cuadro n7">7</div>
+						<div class="cuadro n8">8</div>
+					</div>
+					<div class="col-md-5">
+						<div class="contenido-skill">
+						<h4>HTML</h4>
+						<span>Sirve para crear paginas web, darles estructura y contenido.</span>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="portafolio text-center"><a id="portafolio"></a>
+		<div class="container">
+			<div class="row">
+				<h2>PORTAFOLIO</h2>
+				<ul class="list-inline list-unstyled">
+					<li>
+						<img src="img/user-testing.png" class="img-responsive" alt="user-testing">
+						<div class="imagen-table"><i class="fa fa-github"></i><i class="fa fa-facebook"></i></div>
+					</li>
+					<li>
+						<img src="img/danza-arte.png" class="img-responsive" alt="danza-arte">
+						<div  class="imagen-table"><i class="fa fa-github"></i><i class="fa fa-facebook"></i></div>
+					</li>
+					<li>
+						<img src="img/la-republica.png" class="img-responsive" alt="la-republica">
+						<div  class="imagen-table"><i class="fa fa-github"></i><i class="fa fa-facebook"></i></div>
+					</li>
+					<li>
+						<img src="img/portada.jpg" class="img-responsive" alt="lyft">
+						<div  class="imagen-table"><i class="fa fa-github"></i><i class="fa fa-facebook"></i></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="contact"><a id="contacto"></a>
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center">CONTACTO</h1>
+				<div class="col-md-6">
+					<form>
+					  <div class="form-group">
+						<label for="email">Nombre</label>
+						<input type="email" class="form-control" id="email">
+					  </div>
+					  <div class="form-group">
+						<label for="pwd">Email:</label>
+						<input type="password" class="form-control" id="pwd">
+					  </div>
+					  <div class="checkbox">
+						<label for="pwd">Comentario:</label>
+						<textarea name="" id="" class="form-control" rows="5"></textarea>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<div></div>
+					<div class="bloque">
+						<img src="img/img-contacto.png" alt="imagen-contacto" class="img-responsive">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<footer class="clear-fix text-center">
+		<div class="container">
+			<div class="row">
+				<ul class="list list-inline">
+				<li><i class="fa fa-github"></i></li>
+				<li><i class="fa fa-facebook"></i></li>
+				<li><i class="fa fa-linkedin"></i></li>
+				<li><i class="fa fa-twitter"></i></li>
+				<li><i class="fa fa-google-plus"></i></li>
+			</ul>
+			<hr>
+			<span>Copyright@</span>
+			</div>
+		</div>
+	</footer>
 	<script src="j.s/jquery-3.1.1.min%20(1).js"></script>
 	<script src="j.s/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>

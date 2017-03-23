@@ -60,24 +60,25 @@ function scaleBannerVideoSize(element){
 
     });
 }
-//   section about me
-var height = $(window).height()/2;
-var width = $(window).width()/2;
-
-var pictureRadius = 100;
-
-$("#picture").css({
-  top: height,
-  left: width - pictureRadius  
-});
-
-$("#picture").on("click", function() {
-  $(this).css("-webkit-transition", "all 2s linear");
-  $(this).css("-moz-transition", "all 2s linear");
-  $(this).css({
-    width: "1900px",
-    height: "1900px",
-    top: height - 850 + "px",
-    left: width - pictureRadius - 850 + "px"
-  });
-});
+//   section skill
+/*$(function(){
+	var wrapper = $('#contenedors'),
+		items = wrapper.find('.cuadro'),
+		delay = 700;
+	wrapper.on('click', '.cuadro', function(){
+		//alert('ok');
+		items.each(function(index, el){
+			var $el = $(el);
+			cl =$el.prop('class').replace('cuadro', ''),
+				nr = cl.slice(1);
+			(nr > 1) ? nr-- : nr = 8;
+			$el.removeClass(cl).addClass('n'+nr);
+		});
+	});
+	for(var i=1; i<6; i++){
+		setTimeout(function(){
+			$('.cuadro:first').click();
+		},
+		 delay*i);
+	}
+});*/

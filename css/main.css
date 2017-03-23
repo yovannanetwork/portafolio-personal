@@ -1,59 +1,122 @@
-body{
-	margin: 0;
-	padding: 0;
-}
-/*---section header------*/
-header{
-	position: fixed;
-	z-index: 2000;
-}
-/*-----section video y hero-----*/
-.homepage-hero-module{
-	position: ;
-}
-.hero{
-	position: absolute;
-	bottom: 25%;
-	width: 100%;
-	left: 0;
-	right: 0;
-	vertical-align: middle;
-}
-/*-----section about-me----*/
-.about-me {
-  background: url(http://austinmaterialsmarketplace.org/wp-content/uploads/2015/03/wood-6.jpeg) center bottom;
-	background-size: cover;
-  overflow: hidden;
-}
+* {
+  outline: 1px solid green;
+  margin: 0;
+  padding: 0; }
 
-#container {
-  width: 100%;
-  height: 580px;
-  margin: auto;  
-}
+header {
+  position: fixed;
+  z-index: 2000;
+  background: #456f65;
+  color: white;
+  width: 100%; }
+  header a {
+    color: white; }
 
-#message {
-  font-size: 80px;
-  color: #EEE;
-  font-family: Comic Sans, Comic Sans MS, cursive; 
-  -webkit-transform: rotateZ(-15deg);
-  -moz-transform: rotateZ(-15deg);
-}
-
-#picture {
-  width: 200px;
-  height: 200px;
-  margin: auto;
+.video .hero {
   position: absolute;
-  border-radius: 1000px;
-  box-shadow: 0 1px 5px rgba(255,255,255,.5), inset 0 1px 5px #663718;
-  background: url(../img/imagen-about-me.JPG) center center;
+  bottom: 33.33333%;
+  width: 100%; }
+.video .text-transparente {
+  width: 50%;
+  margin: auto;
+  height: 200px;
+  background: rgba(69, 111, 101, 0.57);
+  color: white; }
+
+.about-me {
+  background-image: url(../img/about-me.JPG);
   background-size: cover;
-  cursor: pointer;
-}
+  height: 680px; }
+  .about-me .text-aboutme {
+    width: 50%;
+    background: rgba(249, 170, 127, 0.58);
+    float: left;
+    margin: 16.66667% auto; }
 
-/*-----section--experiencia----*/
+/*  seccion habilidades   */
+/* ----------- seccion habilidades--*/
+.skill {
+  background: #f9aaff;
+  height: 650px; }
+  .skill .skill-content {
+    margin: 10% auto; }
+    .skill .skill-content h2 {
+      margin: 5%; }
 
-/*-----section---skill-------*/
+.contenedor {
+  margin: 0 auto;
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  height: 300px; }
+  .contenedor .cuadro {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: inline-block;
+    /*bottom: 0;
+    left: 10%;*/
+    line-height: 100px;
+    text-align: center;
+    transition: 800ms;
+    font-size: 50px; }
 
-/*------section--contacto----*/
+.n1 {
+  background: #456f65;
+  transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0) scale(1); }
+
+.n2 {
+  background: #547a71;
+  transform: rotate3d(0, 0, 1, 18deg) translate3d(20px, 0, -20px) scale(0.9); }
+
+.n3 {
+  background: #64837c;
+  transform: rotate3d(0, 0, 1 36deg) translate3d(40px, 0, -40px) scale(0.8); }
+
+.n4 {
+  background: #768b86;
+  transform: rotate3d(0, 0, 1, 36deg) translate3d(60px, 0, -60px) scale(0.7); }
+
+.n5 {
+  background: #89918f;
+  transform: rotate3d(0, 0, 1, 48deg) translate3d(80px, 0, -80px) scale(0.6); }
+
+.n6 {
+  background: #9a9a9a;
+  transform: rotate3d(0, 0, 1, 53deg) translate3d(100px, 0, -100px) scale(0.5); }
+
+.n7 {
+  background: #a7a7a7;
+  transform: rotate3d(0, 0, 1, 55deg) translate3d(120px, 0, -120px) scale(0.4); }
+
+.n8 {
+  background: #b3b3b3;
+  transform: rotate3d(0, 0, 1, 58deg) translate3d(140px, 0, -140px) scale(0.2); }
+
+/* seccion portafolio */
+.portafolio h2 {
+  margin: 8% auto 2% auto; }
+.portafolio ul {
+  margin-left: 0;
+  overflow: hidden; }
+  .portafolio ul li {
+    padding: 10px;
+    background: #456f65;
+    margin: 0 20px 20px 0;
+    position: relative;
+    cursor: pointer;
+    width: 380px;
+    height: 220px;
+    overflow: hidden; }
+    .portafolio ul li .imagen-table {
+      width: 380px;
+      height: 220px;
+      position: absolute;
+      background: rgba(249, 170, 127, 0.58);
+      top: 0;
+      left: 0;
+      display: table; }
+
+/*# sourceMappingURL=main.css.map */

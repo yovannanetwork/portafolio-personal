@@ -1,10 +1,8 @@
-*{
-	outline: 1px solid green;
-}
 .homepage-hero-module {
     border-right: none;
     border-left: none;
     position: relative;
+	/*top: 100px;*/
 	height: 85%;
 }
 .no-video .video-container video,
@@ -19,7 +17,7 @@
     position: relative;
     bottom: 0%;
     left: 0%;
-    height: 85%;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     background: #000;
