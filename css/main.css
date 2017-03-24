@@ -191,6 +191,8 @@ section {
   margin: 5% auto 8% 8%;
   padding: 30px;
   box-sizing: border-box; }
+  .contact form label {
+    color: #000; }
 
 /*   footer */
 footer {
