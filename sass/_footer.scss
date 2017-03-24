@@ -1,0 +1,16 @@
+//  footer
+footer{
+	@include color-mezcla;
+	ul{
+		li{
+			font-size: $icon-size/2;
+			a{
+				color: $white;
+				padding: 0 5px;
+				&:hover{
+					@include hovers;
+				}
+			}
+		}
+	}
+}

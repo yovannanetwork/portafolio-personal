@@ -1,48 +1,51 @@
 // seccion portafolio
+$tamaWidth: '(max-width: 768px)';
 .portafolio{
 	h2{
-		margin: 8% auto 2% auto;
+		@include seconTitle;
 	}
 	ul{
 		margin-left: 0;
 		overflow: hidden;
 		li{
-			padding: 10px;
+			padding: 20px;
 			background: $color-principal;
 			margin: 0 20px 20px 0;
 			position: relative;
 			cursor: pointer;
-			width: $size*3.8;
-			height: $size*2.2;
+			width: $width/3;
+			height: $width/5;
 			overflow: hidden;
 			
 			&:hover{
 				box-shadow: inset 0 0 10px 10px rgba(183, 87, 36, 0.75);
 			}
+			@media #{$tamaWidth}{
+				width: $width;
+			}
+			
 			.imagen-table{
 				width: $size*3.8;
 				height: $size*2.2;
 				position: absolute;
 				background: rgba(183, 87, 36, 0.5);
 				opacity: 0;
-				transition: all 1seg;
+				transition: all 1s;
 				top: 0;
 				left: 0;
 				display: table;
 				&:hover{
-					opacity: 1.5;
+					@include hovers;
 				}
-				i{
-					font-size: 50px;
-					color: white;
+				
+				a{
+					font-size: $icon-size;
+					color: $white;
 					display: table-cell;
 					vertical-align: middle;
-				}
-				span{
-					font-size: 50px;
-					color: white;
-					display: table-cell;
-					vertical-align: middle;
+					transform: scale(0.5);
+					transition: all 2s;
+					background: rgba(183, 87, 36, 0.58);
 				}
 			}
 		}

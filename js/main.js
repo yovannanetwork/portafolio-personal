@@ -1,6 +1,10 @@
 $( document ).ready(function() {
-
+	scrollWindow();
     scaleVideoContainer();
+	animate();
+	
+	//TweenMax.from('#flecha', 1.5, {scale: 0.2, opacity: 0, ease: Elastic.easeOut});
+	//currentSection = nextSection;
 
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
@@ -60,25 +64,70 @@ function scaleBannerVideoSize(element){
 
     });
 }
-//   section skill
-/*$(function(){
-	var wrapper = $('#contenedors'),
-		items = wrapper.find('.cuadro'),
-		delay = 700;
-	wrapper.on('click', '.cuadro', function(){
-		//alert('ok');
-		items.each(function(index, el){
-			var $el = $(el);
-			cl =$el.prop('class').replace('cuadro', ''),
-				nr = cl.slice(1);
-			(nr > 1) ? nr-- : nr = 8;
-			$el.removeClass(cl).addClass('n'+nr);
-		});
-	});
-	for(var i=1; i<6; i++){
-		setTimeout(function(){
-			$('.cuadro:first').click();
-		},
-		 delay*i);
+//  funcion scroll header
+function scrollWindow(){
+	var header = false;
+	var scroll;
+	
+	//escondiendo header
+	$('header').hide();
+	$(window).scroll(function(){
+		scroll = $(window).scrollTop();
+		if(scroll > 630){
+			$('header').show('fast').slideDown(2000);
+			header = true;
+		}else{
+			$('header').hide();
+			header = false;
+		}
+		
+	})
+}
+// animacion en la section about me
+function animate(_data){
+	var banner = $('.hover');
+	for(var i=0; i<999; i++){
+		banner.css('opacity', '1');
+		banner.animate({left: 20}, 10);
+		for(var j=0; j<5; j++){
+			banner.animate({opacity: 0}, 600);
+			banner.animate({opacity: 1}, 600);
+		}
+		
+		banner.delay(200).animate({left: 30}, 30);
+		banner.animate({left: -60}, 0);
 	}
-});*/
+	$('.animate').hide();
+	showFrase();
+}
+function showFrase(){
+	$('#arrow').hover(function(){
+		$('.animate').show(1000);
+	});
+}
+
+//   section skill
+$(function () {
+  
+  var wrapper = $('#contenedors'),
+    items = wrapper.find('.cuadro'),
+      delay = 700; 
+  
+  wrapper.on('click', '.cuadro', function () {
+      items.each(function (index, el) {
+        var $el = $(el),
+            cl = $el.prop('class').replace('cuadro ', ''),
+            nr = cl.slice(1);
+        
+        (nr > 1) ? nr-- : nr = 13;
+        
+        $el.removeClass(cl).addClass('n'+nr);
+      });
+    });
+  
+  //Let's simulate couple of times
+  for(var i = 1; i < 6; i++) {
+    setTimeout(function () { $('.cuadro:first').click(); }, delay*i);  
+  } 
+ 
+});

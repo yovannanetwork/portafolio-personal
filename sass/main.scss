@@ -7,6 +7,7 @@ $colorOpaco: rgba(69, 111, 101, 0.57);
 $colorNaranja: rgb(249,170,271);
 $colorPlomo: rgb(236,234,222);
 $white: white;
+$icon-size: 60px;
 //----------------
 *{
 	outline: 1px solid green;
@@ -23,11 +24,26 @@ header{
 		color: $white;
 	}
 }
+section{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: $width;
+}
 .video{
 	.hero{
 		position: $position;
 		bottom: $width/3;
-		width: $width;	
+		width: $width;
+		.list{
+			position: fixed;
+		}
+		a{
+			position: relative;
+			bottom: -190px;
+			font-size: $icon-size;
+			color: $white;
+		}
 	}
 	.text-transparente{
 		width: $width/2;
@@ -35,22 +51,51 @@ header{
 		height: 200px;
 		background: $colorOpaco;
 		color: $white;
+		display: table-cell;
+		vertical-align: middle;
+		h1{
+			padding: 5% auto;
+		}
 	}
+}
+@mixin seconTitle{
+	margin: 8% auto 3% auto;
 }
 //  section about me
 .about-me{
+	h2{
+		@include seconTitle;
+	}
 	background-image: url(../img/about-me.JPG);
 	background-size: cover;
 	height: 680px;
 	.text-aboutme{
-		width: $width/2;
 		background: $color-secundario;
-		float: left;
-		margin: $width/6 auto;
+		i{
+			font-size: $icon-size/2;
+			color: $white;
+		}
+	}
+	.animate{
+		position: relative;
 	}
 }
 /*  seccion habilidades   */
 
 @import '_skill';
 /* seccion portafolio */
+/*@mixin icon-size{
+	font-size: 60px;
+}*/
+@mixin hovers{
+	opacity: 1.5;
+}
 @import '_portafolio';
+
+/*   footer */
+@mixin color-mezcla{
+	background: $color-principal;
+	color: $white;
+}
+
+@import '_footer'

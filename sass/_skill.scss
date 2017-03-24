@@ -7,12 +7,12 @@ $fontColor: white;
 /* ----------- seccion habilidades--*/
 .skill{
 	background: $colorNaranja;
-	height: 650px;
+	//height: 650px;
+	h2{
+		@include seconTitle;
+	}
 	.skill-content{
 		margin: 10% auto;
-		h2{
-			margin: 5%;
-		}
 	}
 }
 .contenedor{
@@ -37,16 +37,16 @@ $fontColor: white;
 	}
 }
 .n1{
-	background: $fondo;
-	transform: rotate3d(0,0,1, 0deg) translate3d(0,0,0) scale(1.0);
+	background: desaturate(lighten($fondo,10),10);
+	transform: rotate3d(0,0,1, 30deg) translate3d($space*2,0,-$space*2) scale(0.7);
 }
 .n2{
 	background: desaturate(lighten($fondo,5),5);
 	transform: rotate3d(0,0,1, 18deg) translate3d($space,0,-$space) scale(0.90);
 }
 .n3{
-	background: desaturate(lighten($fondo,10),10);
-	transform: rotate3d(0,0,1 36deg) translate3d($space*2,0,-$space*2) scale(0.8);
+	background: $fondo;
+	transform: rotate3d(0,0,1 0deg) translate3d(0,0,0) scale(0.8);
 }
 .n4{
 	background: desaturate(lighten($fondo,15),15);
