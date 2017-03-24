@@ -35,10 +35,9 @@ section {
   height: 200px;
   background: rgba(69, 111, 101, 0.57);
   color: white;
+  margin-right: 0;
   display: table-cell;
   vertical-align: middle; }
-  .video .text-transparente h1 {
-    padding: 5% auto; }
 
 .about-me {
   background-image: url(../img/about-me.JPG);
@@ -153,11 +152,19 @@ section {
       .portafolio ul li .imagen-table a {
         font-size: 60px;
         color: white;
-        display: table-cell;
-        vertical-align: middle;
         transform: scale(0.5);
         transition: all 2s;
-        background: rgba(183, 87, 36, 0.58); }
+        background: rgba(183, 87, 36, 0.58);
+        display: table-cell;
+        vertical-align: middle; }
+
+/* -----section contacto ----*/
+.contact h2 {
+  margin: 8% auto 3% auto; }
+.contact form {
+  margin: 5% auto 8% 8%;
+  padding: 30px;
+  box-sizing: border-box; }
 
 /*   footer */
 footer {

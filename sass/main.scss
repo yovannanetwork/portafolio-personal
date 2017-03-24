@@ -9,6 +9,13 @@ $colorPlomo: rgb(236,234,222);
 $white: white;
 $icon-size: 60px;
 //----------------
+@mixin seconTitle{
+	margin: 8% auto 3% auto;
+}
+@mixin posicionDisplay{
+	display: table-cell;
+	vertical-align: middle;
+}
 *{
 	outline: 1px solid green;
 	margin: 0;
@@ -51,16 +58,11 @@ section{
 		height: 200px;
 		background: $colorOpaco;
 		color: $white;
-		display: table-cell;
-		vertical-align: middle;
-		h1{
-			padding: 5% auto;
-		}
+		margin-right: 0;
+		@include posicionDisplay;
 	}
 }
-@mixin seconTitle{
-	margin: 8% auto 3% auto;
-}
+
 //  section about me
 .about-me{
 	h2{
@@ -91,6 +93,8 @@ section{
 	opacity: 1.5;
 }
 @import '_portafolio';
+/* -----section contacto ----*/
+@import '_contacto';
 
 /*   footer */
 @mixin color-mezcla{

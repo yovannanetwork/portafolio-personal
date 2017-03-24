@@ -41,11 +41,10 @@ $tamaWidth: '(max-width: 768px)';
 				a{
 					font-size: $icon-size;
 					color: $white;
-					display: table-cell;
-					vertical-align: middle;
 					transform: scale(0.5);
 					transition: all 2s;
 					background: rgba(183, 87, 36, 0.58);
+					@include posicionDisplay;
 				}
 			}
 		}
