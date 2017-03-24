@@ -69,16 +69,21 @@ function scrollWindow(){
 	var header = false;
 	var scroll;
 	
-	//escondiendo header
-	$('header').hide();
+	//menu transparente header
+	var titleName = $('.titleName');
+	titleName.hide();
+	
 	$(window).scroll(function(){
 		scroll = $(window).scrollTop();
 		if(scroll > 630){
-			$('header').show('fast').slideDown(2000);
+			$('header').css('background', 'rgb(19, 68, 67)').show('fast');
+			titleName.show();
+			//$('header').show('fast').slideDown(2000);
 			header = true;
 		}else{
-			$('header').hide();
+			$('header').css('background', 'transparent');
 			header = false;
+			titleName.hide();
 		}
 		
 	})

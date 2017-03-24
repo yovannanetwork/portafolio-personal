@@ -1,30 +1,39 @@
 $position: absolute;
 $width: 100%;
 $margin: 0;
-$color-secundario: rgba(249, 170, 127, 0.58);
-$color-principal: rgb(69, 111, 101);
-$colorOpaco: rgba(69, 111, 101, 0.57);
-$colorNaranja: rgb(249,170,271);
-$colorPlomo: rgb(236,234,222);
-$white: white;
+$color-secundario: rgba(15, 14, 14, 0.43);
+//$color-principal: rgb(69, 111, 101);
+$color-principal: rgb(19, 68, 67);
+$colorOpaco: rgb(131, 215, 186);
+$colorTitle: #276046;
+$white: #fff;
 $icon-size: 60px;
+$tamaWidth: '(max-width: 768px)';
 //----------------
 @mixin seconTitle{
 	margin: 8% auto 3% auto;
+	color: $colorTitle;
 }
 @mixin posicionDisplay{
 	display: table-cell;
 	vertical-align: middle;
 }
+@mixin fontFamilyText{
+	//font-family: 'Raleway', sans-serif;
+	font-family: 'Muli', sans-serif;
+	//font-size: 15px;
+	color: $white;
+}
 *{
 	outline: 1px solid green;
 	margin: 0;
 	padding: 0;
+	@include fontFamilyText;
 }
 header{
 	position: fixed;
 	z-index: 2000;
-	background: $color-principal;
+	background: transparent;
 	color: $white;
 	width: $width;
 	a{
@@ -44,6 +53,10 @@ section{
 		width: $width;
 		.list{
 			position: fixed;
+			i{
+				color: #000;
+				font-size: $icon-size/3;
+			}
 		}
 		a{
 			position: relative;
@@ -56,10 +69,15 @@ section{
 		width: $width/2;
 		margin: auto;
 		height: 200px;
-		background: $colorOpaco;
+		background: $color-secundario;
 		color: $white;
-		margin-right: 0;
+		//margin-right: 0;
 		@include posicionDisplay;
+		position: relative;
+		left: 15%;
+		@media #{$tamaWidth}{
+			left: 0;
+		}
 	}
 }
 
@@ -73,6 +91,7 @@ section{
 	height: 680px;
 	.text-aboutme{
 		background: $color-secundario;
+		padding: 20px 20px 10px 20px;
 		i{
 			font-size: $icon-size/2;
 			color: $white;

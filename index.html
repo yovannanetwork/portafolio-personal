@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Muli|Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 	<link rel="stylesheet" href="css/video.css">
 	<link rel="stylesheet" href="css/main.css">
 	<meta charset="UTF-8">
@@ -16,7 +18,7 @@
 			<div class="row">
 				<div class="col-md-5 col-sm-4 col-xs-8">
 					<!--<img src="img/logo-1.png" class="img-responsive" alt="logo">-->
-					<h1><strong>Yovanna Huañahue</strong></h1>
+					<h1 class="titleName"><strong>Yovanna Huañahue</strong></h1>
 				</div>
 				<div class="col-md-7 col-sm-8 col-xs-4">
 					<nav class="navbar">
@@ -66,24 +68,24 @@
 			<div class="position-hero col-md-11 col-sm-11">
 				<div class="text-transparente">
 					<h1 class="text-center"><strong>Yovanna Huañahue</strong></h1>
-					<h2 class="text-center">Web developer</h2>
+					<h2 class="text-center">Desarrolladora web front-end</h2>
 				</div>
 			</div>
 		</div>
 		<div class="flecha-down hero text-center">
-			<a href="#conoceme" id="flecha" class="fa fa-long-arrow-down hover"></a>
+			<!--<a href="#conoceme" id="flecha" class="fa fa-long-arrow-down hover"></a>-->
 		</div>
 	</section>
 	<section class="about-me text-center"><a id="conoceme"></a>
 		<div class="container">
 			<div class="row">
-				<h2>SOBRE MÌ</h2>
-				<div class="col-md-6 col-sm-6 text-aboutme">
+				<h2 class="col-md-6">SOBRE MÌ</h2><h2 class="col-md-6">.</h2>
+				<div class="col-md-6 text-aboutme">
 					<p class="">Mi nombre es Yovanna Huañahue Cruz, soy coder  egresada de Laboratoria. me  gusta  tomar nuevos retos; el último que asumí  fue el de ingresar a laboratoria donde aprendí programación web y gracias a la experiencia brindada puedo enfrentar el mundo real allá afuera con toda la confianza y seguridad de mi misma.
-					También me gusta el deporte, la lectura, la investigación, hacer reportaje, viajar y conocer culturas. <i class="fa fa-long-arrow-right hover" id="arrow"></i>
+					También me gusta el deporte, la lectura, la investigación, hacer reportaje, viajar y conocer culturas. <!--<i class="fa fa-long-arrow-right hover" id="arrow"></i>-->
 					</p>
 				</div>
-				<div class="col-md-6 col-sm-6 text-right canvas">
+				<div class="col-md-6 text-right canvas">
 					<span class="animate">“Me gusta vivir cada dia con el objetivo de aprender algo nuevo”</span>
 				</div>
 			</div>
@@ -94,25 +96,50 @@
 			<div class="row">
 					<h2>HABILIDADES</h2>
 				 <div class="skill-content">
-					<div class="col-md-7 contenedor" id="contenedors">
-						<div class="cuadro n1">1</div>
-						<div class="cuadro n2">2</div>
-						<div class="cuadro n3">3</div>
-						<div class="cuadro n4">4</div>
-						<div class="cuadro n5">5</div>
-						<div class="cuadro n6">6</div>
-						<div class="cuadro n7">7</div>
-						<div class="cuadro n8">8</div>
-					</div>
-					<div class="col-md-5">
-						<div class="contenido-skill">
-						<h4>HTML</h4>
-						<span>Sirve para crear paginas web, darles estructura y contenido.</span>
+					<div class="col-md-6 col-sm-6" id="contenedors">
+						<div class="cuadro n1"><img src="img/css-logo.png" class="img-responsive" alt="html-logo"></div>
+						<div class="cuadro n2"><img src="img/css-logo.png" class="img-responsive" alt="css-logo"></div>
+						<div class="cuadro n3"><img src="img/js-flat.png" class="img-responsive" alt="js-logo"></div>
+						<div class="cuadro n4"><img src="img/jquery.png" class="img-responsive" alt="jquery-logo"></div>
+						<div class="cuadro n5"><img src="img/bootstrap_logo.png" class="img-responsive" alt="boostrap-logo" width="200"></div>
+						<div class="cuadro n6"><img src="img/sass-logo.png" class="img-responsive" alt="sass-logo"></div>
+						<div class="cuadro n7"><img src="img/js-flat.png" class="img-responsive" alt="html-logo"></div>
+						<div class="cuadro n8"><img src="img/html-flat.png" class="img-responsive" alt="html-logo"></div>
 					</div>
 				</div>
+					<div class="col-md-6 col-sm-6 text-content">
+						<div class="contenido-skill" id="visible">
+							<h4>HTML</h4>
+							<span>Sirve para crear paginas web, darles estructura y contenido.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>SASS</h4>
+							<span>Nos permite crear varios archivos de CSS bajo el formato de SCSS y luego compilarlos todos en uno solo.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>JS</h4>
+							<span>Da mayor dinamismo e interactividad a tu sitio web.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>HTML</h4>
+							<span>Sirve para crear paginas web, darles estructura y contenido.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>CSS</h4>
+							<span>Define la estética de un sitio web, que haran la pagina mucho mas agradable y llamativa.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>JQUERY</h4>
+							<span>Sitios Web que se adaptan a los dispositivos, facilitando la lectura y navegación.</span>
+						</div>
+						<div class="contenido-skill">
+							<h4>Boostrap</h4>
+							<span>Framework CSS que te permitirá crear sitios web y aplicaciones web totalmente responsive.</span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		
 	</section>
 	<section class="portafolio text-center"><a id="portafolio"></a>
 		<div class="container">
@@ -188,5 +215,6 @@
 	<script src="j.s/jquery-3.1.1.min%20(1).js"></script>
 	<script src="j.s/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/skill.js"></script>
 </body>
 </html>
