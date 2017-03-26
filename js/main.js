@@ -2,9 +2,6 @@ $( document ).ready(function() {
 	scrollWindow();
     scaleVideoContainer();
 	animate();
-	
-	//TweenMax.from('#flecha', 1.5, {scale: 0.2, opacity: 0, ease: Elastic.easeOut});
-	//currentSection = nextSection;
 
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
@@ -13,8 +10,8 @@ $( document ).ready(function() {
     $(window).on('resize', function() {
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
+       scaleBannerVideoSize('.video-container .filter');
+       scaleBannerVideoSize('.video-container video');
     });
 
 });
@@ -68,9 +65,8 @@ function scaleBannerVideoSize(element){
 function scrollWindow(){
 	var header = false;
 	var scroll;
-	
 	//menu transparente header
-	var titleName = $('.titleName');
+	var titleName = $('.name');
 	titleName.hide();
 	
 	$(window).scroll(function(){

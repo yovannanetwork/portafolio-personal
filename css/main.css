@@ -4,49 +4,102 @@ body {
   font-family: 'Muli', sans-serif;
   color: #fff; }
 
+/*------------header-------------*/
 header {
   position: fixed;
-  z-index: 2000;
+  display: none;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 10px 0;
   background: transparent;
-  color: #fff;
-  width: 100%; }
-  header a {
+  /* menu responsivo */ }
+  header .navbar {
+    margin-bottom: 0;
+    margin-top: 10px; }
+    header .navbar button span {
+      border: 1px solid white; }
+  header .name {
+    float: left;
+    margin-top: 20px;
+    font: bold 14px Raleway;
+    width: 170px; }
+    header .name strong {
+      font-weight: 300;
+      font-family: "Georgia";
+      font-style: italic; }
+  header img {
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #134443; }
+  header a, header .navbar button span {
     color: #fff; }
-
-section {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%; }
-
-.video .hero {
-  position: absolute;
-  bottom: 33.33333%;
-  width: 100%; }
-  .video .hero .list {
-    position: fixed; }
-    .video .hero .list i {
-      color: #000;
-      font-size: 20px; }
-  .video .hero a {
-    position: relative;
-    bottom: -190px;
-    font-size: 60px;
-    color: #fff; }
-.video .text-transparente {
-  width: 50%;
-  margin: auto;
-  height: 200px;
-  background: rgba(15, 14, 14, 0.43);
-  color: #fff;
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  left: 15%; }
+    header a:after, header .navbar button span:after {
+      position: absolute;
+      opacity: 0;
+      width: 0%;
+      height: 3px;
+      content: '';
+      transition: all 0.8s;
+      right: 0;
+      bottom: 0; }
+    header a:before, header .navbar button span:before {
+      position: absolute;
+      opacity: 0;
+      width: 0%;
+      height: 3px;
+      content: '';
+      transition: all 0.8s;
+      left: 0;
+      top: 0; }
+    header a:hover:after, header .navbar button span:hover:after, header a:hover:before, header .navbar button span:hover:before {
+      background: #83d7ba;
+      opacity: 1;
+      width: 100%;
+      color: #134443; }
   @media (max-width: 768px) {
-    .video .text-transparente {
-      left: 0; } }
+    header {
+      position: absolute;
+      background: #134443; } }
 
+/*-------section video--------------*/
+.video {
+  height: 100%; }
+  .video .hero {
+    position: absolute;
+    bottom: 33.33333%;
+    width: 100%; }
+    .video .hero .list {
+      position: fixed; }
+      .video .hero .list i {
+        color: #000;
+        font-size: 20px; }
+    .video .hero a, .video .hero header .navbar button span, header .navbar button .video .hero span {
+      position: relative;
+      bottom: -190px;
+      font-size: 60px;
+      color: #fff; }
+  .video .text-transparente {
+    width: 50%;
+    margin: auto;
+    height: 200px;
+    background: rgba(15, 14, 14, 0.43);
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    left: 0; }
+    .video .text-transparente h1 {
+      text-transform: uppercase;
+      font: bold 5.7em/90% Raleway;
+      font-weight: 700; }
+      @media (max-width: 768px) {
+        .video .text-transparente h1 {
+          font: bold 2.7em/90% Raleway; } }
+    .video .text-transparente h2 {
+      font-size: 20px; }
+
+/*-------section about me---------*/
 .about-me {
   background-image: url(../img/about-me.JPG);
   background-size: cover;
@@ -57,6 +110,8 @@ section {
   .about-me .text-aboutme {
     background: rgba(15, 14, 14, 0.43);
     padding: 20px 20px 10px 20px; }
+    .about-me .text-aboutme p {
+      font-size: 1em; }
     .about-me .text-aboutme i {
       font-size: 30px;
       color: #fff; }
@@ -194,9 +249,6 @@ section.percentage-bar:last-child div.bar {
   background: #525252; }
 
 /* seccion portafolio */
-/*@mixin icon-size{
-	font-size: 60px;
-}*/
 .portafolio h2 {
   margin: 8% auto 3% auto;
   color: #276046; }
@@ -229,7 +281,7 @@ section.percentage-bar:last-child div.bar {
       display: table; }
       .portafolio ul li .imagen-table:hover {
         opacity: 1.5; }
-      .portafolio ul li .imagen-table a {
+      .portafolio ul li .imagen-table a, .portafolio ul li .imagen-table header .navbar button span, header .navbar button .portafolio ul li .imagen-table span {
         font-size: 60px;
         color: #fff;
         transform: scale(0.5);
@@ -256,10 +308,10 @@ footer {
   color: #fff; }
   footer ul li {
     font-size: 30px; }
-    footer ul li a {
+    footer ul li a, footer ul li header .navbar button span, header .navbar button footer ul li span {
       color: #fff;
       padding: 0 5px; }
-      footer ul li a:hover {
+      footer ul li a:hover, footer ul li header .navbar button span:hover, header .navbar button footer ul li span:hover {
         opacity: 1.5; }
 
 /*# sourceMappingURL=main.css.map */

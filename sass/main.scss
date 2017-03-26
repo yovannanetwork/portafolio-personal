@@ -9,6 +9,7 @@ $colorTitle: #276046;
 $white: #fff;
 $icon-size: 60px;
 $tamaWidth: '(max-width: 768px)';
+$sizePhone: '(max-width: 412px)';
 //----------------
 @mixin seconTitle{
 	margin: 8% auto 3% auto;
@@ -30,23 +31,80 @@ body{
 	padding: 0;
 	@include fontFamilyText;
 }
+/*------------header-------------*/
+//$mediaMenu: '(max-width: 995px)';
 header{
 	position: fixed;
-	z-index: 2000;
+	display: none;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	padding: 10px 0;
 	background: transparent;
-	color: $white;
-	width: $width;
+	.navbar{
+		margin-bottom: 0;
+		margin-top: 10px;
+		button{
+			span{
+				@extend a;
+				border: 1px solid white;
+			}
+		}
+	}
+	.name{
+		float: left;
+		margin-top: 20px;
+		font: bold 14px Raleway;
+		width: 170px;
+		strong{
+			font-weight: 300;
+			font-family: "Georgia";
+			font-style: italic;
+		}
+	}
+	img{
+		float: left;
+		border-radius: 50%;
+		border: 1px solid $color-principal;
+	}
+	
 	a{
 		color: $white;
+		@mixin afterBefore{
+			position: absolute;
+			opacity: 0;
+			width: 0%;
+			height: 3px;
+			content: '';
+			transition: all 0.8s;
+		}
+		&:after{
+			@include afterBefore;
+			right: 0;
+			bottom: 0;
+			}
+		&:before{
+			@include afterBefore;
+			left: 0;
+			top: 0;
+		}
+		&:hover:after, &:hover:before{
+			background: $colorOpaco;
+			opacity: 1;
+			width: 100%;
+			color: $color-principal;
+		}
+	}
+	/* menu responsivo */
+	@media #{$tamaWidth}{
+		position: absolute;
+		background: $color-principal;
 	}
 }
-section{
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: $width;
-}
+/*-------section video--------------*/
+
 .video{
+	height: 100%;
 	.hero{
 		position: $position;
 		bottom: $width/3;
@@ -74,14 +132,27 @@ section{
 		//margin-right: 0;
 		@include posicionDisplay;
 		position: relative;
-		left: 15%;
+		left: 0;
 		@media #{$tamaWidth}{
-			left: 0;
+			
+		}
+		h1{
+			text-transform: uppercase;
+			font: bold 5.7em/90% Raleway;
+			font-weight: 700;
+			@media #{$tamaWidth}{
+				font: bold 2.7em/90% Raleway;
+			}			
+		
+		}
+		h2{
+			font-size: 20px;
 		}
 	}
 }
 
 //  section about me
+/*-------section about me---------*/
 .about-me{
 	h2{
 		@include seconTitle;
@@ -92,6 +163,17 @@ section{
 	.text-aboutme{
 		background: $color-secundario;
 		padding: 20px 20px 10px 20px;
+		
+		//responsivo texto sobre mi
+		@media #{$sizePhone}{
+			//padding: 10px 0px 10px 10px;
+		}
+		p{
+			font-size:1em;
+			@media #{$sizePhone}{
+				//font-size: 1.2em;
+			}
+		}
 		i{
 			font-size: $icon-size/2;
 			color: $white;
@@ -105,9 +187,6 @@ section{
 
 @import '_skill';
 /* seccion portafolio */
-/*@mixin icon-size{
-	font-size: 60px;
-}*/
 @mixin hovers{
 	opacity: 1.5;
 }
