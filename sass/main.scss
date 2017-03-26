@@ -24,8 +24,8 @@ $tamaWidth: '(max-width: 768px)';
 	//font-size: 15px;
 	color: $white;
 }
-*{
-	outline: 1px solid green;
+body{
+	//outline: 1px solid green;
 	margin: 0;
 	padding: 0;
 	@include fontFamilyText;
@@ -121,4 +121,4 @@ section{
 	color: $white;
 }
 
-@import '_footer'
+@import '_footer';

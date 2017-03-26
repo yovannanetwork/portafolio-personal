@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  color: #fff; }
+
+header {
+  position: fixed;
+  z-index: 2000;
+  background: transparent;
+  color: #fff;
+  width: 100%; }
+  header a {
+    color: #fff; }
+
+section {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; }
+
+.video .hero {
+  position: absolute;
+  bottom: 33.33333%;
+  width: 100%; }
+  .video .hero .list {
+    position: fixed; }
+    .video .hero .list i {
+      color: #000;
+      font-size: 20px; }
+  .video .hero a {
+    position: relative;
+    bottom: -190px;
+    font-size: 60px;
+    color: #fff; }
+.video .text-transparente {
+  width: 50%;
+  margin: auto;
+  height: 200px;
+  background: rgba(15, 14, 14, 0.43);
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  left: 15%; }
+  @media (max-width: 768px) {
+    .video .text-transparente {
+      left: 0; } }
+
+.about-me {
+  background-image: url(../img/about-me.JPG);
+  background-size: cover;
+  height: 680px; }
+  .about-me h2 {
+    margin: 8% auto 3% auto;
+    color: #276046; }
+  .about-me .text-aboutme {
+    background: rgba(15, 14, 14, 0.43);
+    padding: 20px 20px 10px 20px; }
+    .about-me .text-aboutme i {
+      font-size: 30px;
+      color: #fff; }
+  .about-me .animate {
+    position: relative; }
+
+/*  seccion habilidades   */
+/* ----------- seccion habilidades--*/
+.skill {
+  height: 500px; }
+  .skill h2 {
+    margin: 8% auto 3% auto;
+    color: #276046; }
+  .skill .skill-content {
+    /*
+    margin: 0 auto;
+    //position: relative;
+    //perspective: $size*8;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    height: $size*3;*/ }
+    .skill .skill-content .cuadro {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      /*bottom: 0;
+      left: 10%;*/
+      line-height: 100px;
+      text-align: center;
+      transition: 800ms;
+      font-size: 50px;
+      left: 25%; }
+  .skill .text-content {
+    /*//position: relative;
+    padding-left: 0;
+    width: $width/3;
+    height: 200px;*/ }
+    .skill .text-content .contenido-skill {
+      position: absolute;
+      background: #134443;
+      color: #fff; }
+    @media (max-width: 768px) {
+      .skill .text-content {
+        margin: 80% 0 0 0;
+        margin-bottom: 0; } }
+
+.n1 {
+  background: #64837c;
+  transform: rotate3d(0, 0, 1, 30deg) translate3d(60px, 0, -60px) scale(0.85); }
+
+.n2 {
+  background: #547a71;
+  transform: rotate3d(0, 0, 1, 18deg) translate3d(40px, 0, -40px) scale(1); }
+
+.n3 {
+  background: #456f65;
+  transform: rotate3d(0, 0, 1 0deg) translate3d(0, 0, 0) scale(0.8); }
+
+.n4 {
+  background: #768b86;
+  transform: rotate3d(0, 0, 1, 36deg) translate3d(80px, 0, -80px) scale(1.2); }
+
+.n5 {
+  background: #89918f;
+  transform: rotate3d(0, 0, 1, 48deg) translate3d(100px, 0, -100px) scale(0.75); }
+
+.n6 {
+  background: #9a9a9a;
+  transform: rotate3d(0, 0, 1, 53deg) translate3d(120px, 0, -120px) scale(0.65); }
+
+.n7 {
+  background: #a7a7a7;
+  transform: rotate3d(0, 0, 1, 55deg) translate3d(140px, 0, -140px) scale(0.55); }
+
+.n8 {
+  background: #b3b3b3;
+  transform: rotate3d(0, 0, 1, 58deg) translate3d(160px, 0, -160px) scale(0.45); }
+
+/* seccion portafolio */
+/*@mixin icon-size{
+	font-size: 60px;
+}*/
+.portafolio h2 {
+  margin: 8% auto 3% auto;
+  color: #276046; }
+.portafolio ul {
+  margin-left: 0;
+  overflow: hidden; }
+  .portafolio ul li {
+    padding: 20px;
+    background: #134443;
+    margin: 0 20px 20px 0;
+    position: relative;
+    cursor: pointer;
+    width: 33.33333%;
+    height: 20%;
+    overflow: hidden; }
+    .portafolio ul li:hover {
+      box-shadow: inset 8px 8px 15px 15px #83d7ba; }
+    @media (max-width: 768px) {
+      .portafolio ul li {
+        width: 100%; } }
+    .portafolio ul li .imagen-table {
+      width: 380px;
+      height: 220px;
+      position: absolute;
+      background: rgba(15, 14, 14, 0.43);
+      opacity: 0;
+      transition: all 1s;
+      top: 0;
+      left: 0;
+      display: table; }
+      .portafolio ul li .imagen-table:hover {
+        opacity: 1.5; }
+      .portafolio ul li .imagen-table a {
+        font-size: 60px;
+        color: #fff;
+        transform: scale(0.5);
+        transition: all 2s;
+        background: #83d7ba;
+        opacity: 1.5;
+        display: table-cell;
+        vertical-align: middle; }
+
+/* -----section contacto ----*/
+.contact h2 {
+  margin: 8% auto 3% auto;
+  color: #276046; }
+.contact form {
+  margin: 5% auto 8% 8%;
+  padding: 30px;
+  box-sizing: border-box; }
+  .contact form label {
+    color: #000; }
+
+/*   footer */
+footer {
+  background: #134443;
+  color: #fff; }
+  footer ul li {
+    font-size: 30px; }
+    footer ul li a {
+      color: #fff;
+      padding: 0 5px; }
+      footer ul li a:hover {
+        opacity: 1.5; }
+
+/*# sourceMappingURL=main.scss.map */

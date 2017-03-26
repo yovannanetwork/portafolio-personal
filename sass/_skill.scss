@@ -1,88 +1,182 @@
 //declarando variables
 $size: 100px;
-$space: $size/5;
-$duracion: 800ms;
-$fondo: rgb(69, 111, 101);
-$fontColor: #fff;
 
-$tamaWidth: '(max-width: 768px)';
-/* ----------- seccion habilidades--*/
-.skill{
-	//background: $colorTitle;
-	height: $size*5;
+.mapslider {
 	h2{
 		@include seconTitle;
 	}
-	.skill-content{
-		/*
-		margin: 0 auto;
-		//position: relative;
-		//perspective: $size*8;
-		transform-style: preserve-3d;
-		transform-origin: 50% 50%;
-		height: $size*3;*/
-		.cuadro{
-			position: $position;
-			width: $size*2;
-			height: $size*2;
-			display: inline-block;
-			/*bottom: 0;
-			left: 10%;*/
-			line-height: $size;
-			text-align: center;
-			transition: $duracion;
-			font-size: $size/2;
-			left: 25%;
+	  height: 650px;
+	  position: relative;
+	  background: $color-secundario;
+	  overflow: hidden;
+	  .mapmark {
+		overflow: hidden;
+		position: absolute;
+		width: 90px;
+		height: 90px;
+		background: #F3EFE0;
+		line-height: 20px;
+		box-shadow: 0 10px 10px -1px #5f1f20;
+		border-radius: 50%;
+		//text-shadow: 0 0 10px #5f1f20;
+		cursor: pointer;
+		&#m1 {
+		  top: 100px;
+		  right: 100px;
 		}
-		
- }
-	.text-content{
-			/*//position: relative;
-			padding-left: 0;
-			width: $width/3;
-			height: 200px;*/
-			
-			.contenido-skill{
-				position: absolute;
-				background: $color-principal;
-				color: $white;
-			}
-		@media #{$tamaWidth}{
-			margin: 80% 0 0 0;
-			margin-bottom: 0;
+		&#m2 {
+		  top: 50px;
+		  right: 200px;
 		}
+		&#m3 {
+		  top: 100px;
+		  right: 300px;
 		}
-	
+		&#m4 {
+		  top: 200px;
+		  right: 100px;
+		}
+		&#m5 {
+		  top: 150px;
+		  right: 200px;
+		}
+		&#m6 {
+		  top: 250px;
+		  right: 200px;
+		}
+		&#m7 {
+		  top: 200px;
+		  right: 300px;
+		}
+		&.active {
+		  background: #000;
+		  box-shadow: 0 0px 10px -1px $color-principal;
+		  font-weight: bold;
+		  cursor: default;
+		}
+	  }
+	  .mapnav {
+		padding: 20px;
+		height: 650px;
+		box-shadow: 0 0 260px -60px #000;
+		span {
+		  display: block;
+		  padding: 3px 20px;
+		  cursor: pointer;
+		  &.active {
+			font-weight: bold;
+			cursor: default;
+		  }
+		}
+	  }
 }
-.n1{
-	background: desaturate(lighten($fondo,10),10);
-	transform: rotate3d(0,0,1, 30deg) translate3d($space*3,0,-$space*3) scale(0.85);
+
+/*---------------------------------------------*/
+
+.percentage-bar {
+  background: #fff;
+  display: block;
+  height: 35px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -webkit-transition: 0.4s linear;
+  transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  -webkit-transition-property: width, background-color;
+  width: 100%;
 }
-.n2{
-	background: desaturate(lighten($fondo,5),5);
-	transform: rotate3d(0,0,1, 18deg) translate3d($space*2,0,-$space*2) scale(1.0);
+@mixin datosPercent{
+	color: $white;
+	font-size: 14px;
+	position: absolute;
+  	top: 0;
 }
-.n3{
-	background: $fondo;
-	transform: rotate3d(0,0,1 0deg) translate3d(0,0,0) scale(0.8);
+.title {
+  @include datosPercent;
+  left: 0;
+  width: 120px;
+  span {
+    background: rgba(0, 0, 0, 0.1);
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-align: center;
+  }
 }
-.n4{
-	background: desaturate(lighten($fondo,15),15);
-	transform: rotate3d(0,0,1, 36deg) translate3d($space*4,0,-$space*4) scale(1.2);
+
+.bar {
+  height: 35px;
+  width: 0px;
 }
-.n5{
-	background: desaturate(lighten($fondo,20),20);
-	transform: rotate3d(0,0,1, 48deg) translate3d($space*5,0,-$space*5) scale(0.75);
+
+.percent {
+  @include datosPercent;
+  color: rgba(0, 0, 0, 0.4);
+  height: 35px;
+  line-height: 35px;
+  right: 10px;
 }
-.n6{
-	background: desaturate(lighten($fondo,25),25);
-	transform: rotate3d(0,0,1, 53deg) translate3d($space*6,0,-$space*6) scale(0.65);
-}
-.n7{
-	background: desaturate(lighten($fondo,30),30);
-	transform: rotate3d(0,0,1, 55deg) translate3d($space*7,0,-$space*7) scale(0.55);
-}
-.n8{
-	background: desaturate(lighten($fondo,35),35);
-	transform: rotate3d(0,0,1, 58deg) translate3d($space*8,0,-$space*8) scale(0.45);
+
+section.percentage-bar {
+  &:first-child div {
+    &.title {
+      //background: rgb(239, 94, 67);
+		background: $color-principal;
+    }
+    &.bar {
+      background: #dd2828;
+    }
+  }
+  &:nth-child(2) div {
+    &.title {
+      //background: rgb(239, 201, 45);
+	  background: $color-principal;
+    }
+    &.bar {
+      background: #e67e22;
+    }
+  }
+  &:nth-child(3) div {
+    &.title {
+      //background: rgb(73, 54, 100);
+		background: $color-principal;
+    }
+    &.bar {
+      background: #2ecc71;
+    }
+  }
+  &:nth-child(4) div {
+    &.title {
+      //background: rgb(42, 93, 232);
+	  background: $color-principal;
+    }
+    &.bar {
+      background: #3498db;
+    }
+  }
+  &:nth-child(5) div {
+    &.title {
+      //background: rgb(240, 154, 53);
+		background: $color-principal;
+    }
+    &.bar {
+      background: #6f37db;
+    }
+  }
+  &:last-child div {
+    &.title {
+      //background: rgb(244, 192, 238);
+		background: $color-principal;
+    }
+    &.bar {
+      background: #525252;
+    }
+  }
 }
