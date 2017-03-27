@@ -4,8 +4,8 @@ $margin: 0;
 $color-secundario: rgba(15, 14, 14, 0.43);
 //$color-principal: rgb(69, 111, 101);
 $color-principal: rgb(19, 68, 67);
-$colorOpaco: rgb(131, 215, 186);
-$colorTitle: #276046;
+$colorOpaco: rgb(82, 234, 182);
+$colorTitle: rgb(39,52,67);
 $white: #fff;
 $icon-size: 60px;
 $tamaWidth: '(max-width: 768px)';
@@ -14,6 +14,8 @@ $sizePhone: '(max-width: 412px)';
 @mixin seconTitle{
 	margin: 8% auto 3% auto;
 	color: $colorTitle;
+	font-family: 'Muli';
+	font-weight: 500;
 }
 @mixin posicionDisplay{
 	display: table-cell;

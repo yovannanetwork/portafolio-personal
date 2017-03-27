@@ -3,11 +3,13 @@ footer{
 	@include color-mezcla;
 	ul{
 		li{
-			font-size: $icon-size/2;
+			font-size: $icon-size/3;
 			a{
 				color: $white;
 				padding: 0 5px;
 				&:hover{
+					color: $colorOpaco;
+					text-decoration: none;
 					@include hovers;
 				}
 			}

@@ -53,7 +53,7 @@ header {
       left: 0;
       top: 0; }
     header a:hover:after, header .navbar button span:hover:after, header a:hover:before, header .navbar button span:hover:before {
-      background: #83d7ba;
+      background: #52eab6;
       opacity: 1;
       width: 100%;
       color: #134443; }
@@ -106,7 +106,9 @@ header {
   height: 680px; }
   .about-me h2 {
     margin: 8% auto 3% auto;
-    color: #276046; }
+    color: #273443;
+    font-family: 'Muli';
+    font-weight: 500; }
   .about-me .text-aboutme {
     background: rgba(15, 14, 14, 0.43);
     padding: 20px 20px 10px 20px; }
@@ -122,17 +124,18 @@ header {
 .mapslider {
   height: 650px;
   position: relative;
-  background: rgba(15, 14, 14, 0.43);
+  background: rgba(133, 160, 151, 0.31);
   overflow: hidden; }
   .mapslider h2 {
     margin: 8% auto 3% auto;
-    color: #276046; }
+    color: #273443;
+    font-family: 'Muli';
+    font-weight: 500; }
   .mapslider .mapmark {
     overflow: hidden;
     position: absolute;
     width: 90px;
     height: 90px;
-    background: #F3EFE0;
     line-height: 20px;
     box-shadow: 0 10px 10px -1px #5f1f20;
     border-radius: 50%;
@@ -173,9 +176,10 @@ header {
       cursor: pointer; }
       .mapslider .mapnav span.active {
         font-weight: bold;
-        cursor: default; }
+        cursor: default;
+        color: #525252; }
 
-/*---------------------------------------------*/
+/*---------------barrras de porcentaje-------------*/
 .percentage-bar {
   background: #fff;
   display: block;
@@ -202,7 +206,6 @@ header {
   left: 0;
   width: 120px; }
   .title span {
-    background: rgba(0, 0, 0, 0.1);
     display: block;
     height: 35px;
     line-height: 35px;
@@ -224,40 +227,58 @@ header {
   right: 10px; }
 
 section.percentage-bar:first-child div.title {
-  background: #134443; }
+  background: #52eab6; }
 section.percentage-bar:first-child div.bar {
-  background: #dd2828; }
+  background: #134443; }
 section.percentage-bar:nth-child(2) div.title {
-  background: #134443; }
+  background: #52eab6; }
 section.percentage-bar:nth-child(2) div.bar {
-  background: #e67e22; }
+  background: #134443; }
 section.percentage-bar:nth-child(3) div.title {
-  background: #134443; }
+  background: #52eab6; }
 section.percentage-bar:nth-child(3) div.bar {
-  background: #2ecc71; }
+  background: #134443; }
 section.percentage-bar:nth-child(4) div.title {
-  background: #134443; }
+  background: #52eab6; }
 section.percentage-bar:nth-child(4) div.bar {
-  background: #3498db; }
+  background: #134443; }
 section.percentage-bar:nth-child(5) div.title {
-  background: #134443; }
+  background: #52eab6; }
 section.percentage-bar:nth-child(5) div.bar {
-  background: #6f37db; }
-section.percentage-bar:last-child div.title {
   background: #134443; }
-section.percentage-bar:last-child div.bar {
-  background: #525252; }
+section.percentage-bar:nth-child(6) div.title {
+  background: #52eab6; }
+section.percentage-bar:nth-child(6) div.bar {
+  background: #134443; }
+section.percentage-bar:nth-child(7) div.title {
+  background: #52eab6; }
+section.percentage-bar:nth-child(7) div.bar {
+  background: #134443; }
+
+/*------boton click porcentaje-----*/
+#boton, .contact form button {
+  width: 100px;
+  margin: auto;
+  padding: 5px;
+  box-shadow: 4px 4px 0 #273443;
+  background: transparent;
+  border: 2px solid #273443; }
+  #boton i, .contact form button i {
+    color: #273443;
+    font-size: 30px; }
 
 /* seccion portafolio */
 .portafolio h2 {
   margin: 8% auto 3% auto;
-  color: #276046; }
+  color: #273443;
+  font-family: 'Muli';
+  font-weight: 500; }
 .portafolio ul {
   margin-left: 0;
   overflow: hidden; }
   .portafolio ul li {
     padding: 20px;
-    background: #134443;
+    background: #273443;
     margin: 0 20px 20px 0;
     position: relative;
     cursor: pointer;
@@ -265,7 +286,7 @@ section.percentage-bar:last-child div.bar {
     height: 20%;
     overflow: hidden; }
     .portafolio ul li:hover {
-      box-shadow: inset 8px 8px 15px 15px #83d7ba; }
+      background: #52eab6; }
     @media (max-width: 768px) {
       .portafolio ul li {
         width: 100%; } }
@@ -286,32 +307,44 @@ section.percentage-bar:last-child div.bar {
         color: #fff;
         transform: scale(0.5);
         transition: all 2s;
-        background: #83d7ba;
-        opacity: 1.5;
         display: table-cell;
         vertical-align: middle; }
+        .portafolio ul li .imagen-table a:hover, .portafolio ul li .imagen-table header .navbar button span:hover, header .navbar button .portafolio ul li .imagen-table span:hover {
+          opacity: 1.5;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px; }
 
 /* -----section contacto ----*/
-.contact h2 {
-  margin: 8% auto 3% auto;
-  color: #276046; }
-.contact form {
-  margin: 5% auto 8% 8%;
-  padding: 30px;
-  box-sizing: border-box; }
-  .contact form label {
-    color: #000; }
+.contact {
+  background: rgba(31, 75, 62, 0.21); }
+  .contact h2 {
+    margin: 8% auto 3% auto;
+    color: #273443;
+    font-family: 'Muli';
+    font-weight: 500; }
+  .contact form {
+    margin: 5% auto 8% 8%;
+    padding: 30px;
+    box-sizing: border-box; }
+    .contact form i {
+      color: #273443;
+      font-size: 20px; }
+    .contact form button {
+      color: #273443; }
 
 /*   footer */
 footer {
   background: #134443;
   color: #fff; }
   footer ul li {
-    font-size: 30px; }
+    font-size: 20px; }
     footer ul li a, footer ul li header .navbar button span, header .navbar button footer ul li span {
       color: #fff;
       padding: 0 5px; }
       footer ul li a:hover, footer ul li header .navbar button span:hover, header .navbar button footer ul li span:hover {
+        color: #52eab6;
+        text-decoration: none;
         opacity: 1.5; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 // seccion contacto
 .contact{
+	background: rgba(31, 75, 62, 0.21);
 	h2{
 		@include seconTitle;
 	}
@@ -8,8 +9,13 @@
 		padding: 30px;
 		box-sizing: border-box;
 		
-		label{ 
-		color: #000;
+		i{ 
+			color: $colorTitle;
+			font-size: $icon-size/3;
+		}
+		button{
+			@extend #boton;
+			color: $colorTitle;
 		}
 	}
 }

@@ -12,6 +12,7 @@
 	<title>Yovanna Huaññahue Cruz</title>
 </head>
 <body>
+<!----------------------header--------------------->
 	<header>
 		<div class="container">
 			<div class="row">
@@ -45,12 +46,13 @@
 			</div>
 		</div>
 	</header>
+	<!------------------------seccion video------------------------>
 	<section class="video"><a id="inicio"></a>
 		<div class="homepage-hero-module">
 			<div class="video-container">
 				<!--<div class="filter"></div>-->
 				<video autoplay loop class="fillWidth">
-					<source src="video/video%20valido.mp4" type="video/mp4" />
+					<source src="video/video%20nunes1.mp4" type="video/mp4" />
 				</video>
 			</div>
 		</div>
@@ -75,6 +77,7 @@
 			<!--<a href="#conoceme" id="flecha" class="fa fa-long-arrow-down hover"></a>-->
 		</div>
 	</section>
+	<!------------------seccion sobre mì------------------------->
 	<section class="about-me text-center"><a id="conoceme"></a>
 		<div class="container">
 			<div class="row">
@@ -91,6 +94,7 @@
 			</div>
 		</div>
 	</section>
+	<!---------------seccion habilidades------------------------>
 	<section class="mapslider skill"><a id="skill"></a>
 	  <div class="container">
 	  	<div class="row">
@@ -98,9 +102,9 @@
 	  	    <div class="col-md-6 hidden-sm hidden-xs">
 				<span class="mapmark" id="m1" rel="0"><img src="img/html-flat.png" class="img-responsive" alt=""></span>
 				<span class="mapmark" id="m2" rel="1"><img src="img/css-logo.png" class="img-responsive" alt=""></span>
-				<span class="mapmark" id="m3" rel="2"><img src="img/js-flat.png" class="img-responsive" alt=""></span>
-				<span class="mapmark" id="m4" rel="3"><img src="img/jquery.png" class="img-responsive" alt=""></span>
-				<span class="mapmark" id="m5" rel="4"><img src="img/bootstrap_logo.png" class="img-responsive" alt=""></span>
+				<span class="mapmark" id="m3" rel="2"><img src="img/bootstrap_logo.png" class="img-responsive" alt=""></span>
+				<span class="mapmark" id="m4" rel="3"><img src="img/js-flat.png" class="img-responsive" alt=""></span>
+				<span class="mapmark" id="m5" rel="4"><img src="img/jquery.png" class="img-responsive" alt=""></span>
 				<span class="mapmark" id="m6" rel="5"><img src="img/sass-logo.png" class="img-responsive" alt=""></span>
 				<span class="mapmark" id="m7" rel="6"><img src="img/html-flat.png" class="img-responsive" alt=""></span>
 			</div>
@@ -131,7 +135,7 @@
 				      <div class="percent"></div>
 			    </section>
 
-			    <section class="percentage-bar" data-percent="35%">
+			    <section class="percentage-bar" data-percent="60%">
 				      <div class="title"><span rel="4">JQUERY</span></div>
 				      <div class="bar" rel="4"></div>
 				      <div class="percent"></div>
@@ -148,12 +152,16 @@
 				      <div class="bar" rel="6"></div>
 				      <div class="percent"></div>
 			    </section> 
+			    <div class="visible-xs text-center">
+			    	<button id="boton"><i class="fa fa-bar-chart"></i></button>
+			    </div>
 				
 			  </div>
 		   </div>
 	  	</div>
 	  </div>
 	</section>
+	<!-------------------seccion portafolio------------------------->
 	<section class="portafolio text-center"><a id="portafolio"></a>
 		<div class="container">
 			<div class="row">
@@ -179,26 +187,47 @@
 			</div>
 		</div>
 	</section>
+	<!---------------seccion contacto--------------------------------->
 	<section class="contact"><a id="contacto"></a>
 		<div class="container">
 			<div class="row">
 				<h2 class="text-center">CONTACTO</h2>
 				<div class="col-md-7 col-sm-7">
-					<form>
-					  <div class="form-group">
-						<label for="email">Nombre</label>
-						<input type="email" class="form-control" id="email">
-					  </div>
-					  <div class="form-group">
-						<label for="pwd">Email:</label>
-						<input type="password" class="form-control" id="pwd">
-					  </div>
-					  <div class="checkbox">
-						<label for="pwd">Comentario:</label>
-						<textarea name="" id="" class="form-control" rows="5"></textarea>
-					  </div>
-					  <button type="submit" class="btn btn-default">Submit</button>
-					</form>
+					<form class="form-horizontal" id="validateForm" method="post">
+                    <fieldset>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user"></i></span>
+                            <div class="col-md-8">
+                                <input id="name" name="name" minlength="4" type="text" placeholder="Nombre" class="form-control" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="email" name="email" type="text" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" name="message" placeholder="Escribe un mensaje" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn" id="enviar">Enviar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
 				</div>
 				<div class="col-md-5 col-sm-5 hidden-xs">
 					<div></div>
@@ -209,6 +238,7 @@
 			</div>
 		</div>
 	</section>
+	<!-------------seccion footer------------------------>
 	<footer class="clear-fix text-center">
 		<div class="container">
 			<div class="row">
@@ -218,16 +248,25 @@
 				<li><a href="https://github.com/yovannanetwork" class="fa fa-linkedin" target="_blank"></a></li>
 				<li><a href="https://github.com/yovannanetwork" class="fa fa-twitter" target="_blank"></a></li>
 				<li><a href="https://github.com/yovannanetwork" class="fa fa-google-plus" target="_blank"></a></li>
+				<li><a href="https://github.com/yovannanetwork" class="fa fa-phone-square" data-toggle="tootip" title="930162726" target="_blank"></a></li>
 			 </ul>
 			<hr>
 			<span>Copyright@</span>
 			</div>
 		</div>
+	<!-----------------jquery para tooltips numero------------->
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tootip"]').tooltip();
+			});
+		</script>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 	<script src="j.s/jquery-3.1.1.min%20(1).js"></script>
 	<script src="j.s/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/skill.js"></script>
+	<script src="js/contacto.js"></script>
+
 </body>
 </html>
